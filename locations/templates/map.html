@@ -14,10 +14,9 @@
             height: 800px;
         }
     </style>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome-4.7.0/css/font-awesome.min.css' %}" >
   </head>
   <body>
-    <h1>Map of Surfing Photos in California<i class="fa fa-camera" aria-hidden="true"></i></h1>
+    <h1>Map of Surfing Photos in California</h1>
     {% leaflet_map "main" callback="maplocations" %}
     <script type="text/javascript">
 
