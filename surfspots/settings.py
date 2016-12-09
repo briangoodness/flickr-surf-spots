@@ -26,8 +26,12 @@ SECRET_KEY = os.environ['SECRET_KEY']
 #DEBUG = False
 DEBUG = os.environ['DEBUG_SETTING']
 
+# set allowed hosts
 ALLOWED_HOSTS = ["*",".herokuapp.com"]
 
+# set GEOS library path
+GEOS_LIBRARY_PATH = environ.get('GEOS_LIBRARY_PATH')
+GDAL_LIBRARY_PATH = environ.get('GDAL_LIBRARY_PATH')
 
 # Application definition
 
