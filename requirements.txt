@@ -24,6 +24,5 @@ pyproj==1.9.5.1
 python-dateutil==2.6.0
 pytz==2016.7
 requests==2.12.3
-Shapely==1.5.17
 six==1.10.0
 SQLAlchemy==1.1.4
