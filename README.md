@@ -1,6 +1,6 @@
 # Mapping Using Flickr Surf Spots
 
-## App Hosted @ : http://flick-surf-spots.herokuapp.com/
+## App Hosted @ : http://flickr-surf-spots.herokuapp.com/
 
 ## Technology Stack:
 - Frontend: Bootstrap, Leaflet JS / CSS
