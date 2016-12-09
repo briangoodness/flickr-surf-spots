@@ -1,0 +1,38 @@
+{% load staticfiles %}
+{% load leaflet_tags %}
+<html>
+  <head>
+    {% leaflet_js %}
+    {% leaflet_css %}
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <style>
+        .leaflet-container {  /* all maps */
+            width:  400px;
+            height: 400px;
+        }
+        #specialbigmap {
+            height: 800px;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome-4.7.0/css/font-awesome.min.css' %}" >
+  </head>
+  <body>
+    <h1>Map of Surfing Photos in California<i class="fa fa-camera" aria-hidden="true"></i></h1>
+    {% leaflet_map "main" callback="maplocations" %}
+    <script type="text/javascript">
+
+      function displayBox(feature, layer) {
+        layer.bindPopup("<b>Date Taken:</b> " + feature.properties.datetaken + "<br><b>Lat:</b> " + feature.properties.latitude + "<br><b>Long:</b> " + feature.properties.longitude);
+      }
+
+      function maplocations(map, options) {
+        var mapdata = '{% url "data" %}';
+        $.getJSON(mapdata, function(data) {
+          L.geoJson(data,{
+            onEachFeature: displayBox
+          }).addTo(map);
+        })
+      }
+    </script>
+  </body>
+</html>
