@@ -27,7 +27,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 DEBUG = os.environ['DEBUG_SETTING']
 
 # set allowed hosts
-ALLOWED_HOSTS = ["*",".herokuapp.com"]
+ALLOWED_HOSTS = ["localhost",".herokuapp.com"]
 
 # set GEOS library path
 GEOS_LIBRARY_PATH = environ.get('GEOS_LIBRARY_PATH')
@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.gis',
     'djgeojson',
     'leaflet',
+    'bootstrap3',
     'locations',
     ]
 
