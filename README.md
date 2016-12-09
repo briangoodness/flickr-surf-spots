@@ -11,5 +11,4 @@
 
 ## Notes:
 - In order to get GeoJSON working, I had to fix a bug in the serializers.py file of the django-geojson package's code (reference: https://github.com/makinacorpus/django-geojson/issues/80)
-
-
+- In order to install Shapely on Heroku, a custom Python buildpack must be added. This can be done using the instructions here: https://github.com/JasonSanford/heroku-buildpack-python-geos
