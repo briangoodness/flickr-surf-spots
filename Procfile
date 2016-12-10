@@ -1,1 +1,1 @@
-web: gunicorn surfspots:app
+web: gunicorn surfspots.wsgi --log-file -
