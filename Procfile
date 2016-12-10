@@ -1,1 +1,1 @@
-web: gunicorn surfspots.wsgi --log-file -
+web: gunicorn flickr-surf-spots:app
