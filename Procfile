@@ -1,1 +1,1 @@
-web: gunicorn flickr-surf-spots:app
+web: gunicorn surfspots:app
