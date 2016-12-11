@@ -30,8 +30,8 @@ DEBUG = os.environ['DEBUG_SETTING']
 ALLOWED_HOSTS = ["localhost",".herokuapp.com"]
 
 # set GEOS library path
-GEOS_LIBRARY_PATH = environ.get('GEOS_LIBRARY_PATH')
-GDAL_LIBRARY_PATH = environ.get('GDAL_LIBRARY_PATH')
+GEOS_LIBRARY_PATH = os.environ.get('GEOS_LIBRARY_PATH')
+GDAL_LIBRARY_PATH = os.environ.get('GDAL_LIBRARY_PATH')
 
 # Application definition
 
