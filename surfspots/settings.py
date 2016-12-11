@@ -34,8 +34,6 @@ from os import environ
 GEOS_LIBRARY_PATH = "{}/libgeos_c.so".format(os.environ.get('GEOS_LIBRARY_PATH'))
 GDAL_LIBRARY_PATH = "{}/libgdal.so".format(os.environ.get('GDAL_LIBRARY_PATH'))
 PROJ4_LIBRARY_PATH = "{}/libproj.so".format(os.environ.get('PROJ4_LIBRARY_PATH'))
-# GEOS_LIBRARY_PATH = os.environ.get('GEOS_LIBRARY_PATH')
-# GDAL_LIBRARY_PATH = os.environ.get('GDAL_LIBRARY_PATH')
 
 # Application definition
 
@@ -136,10 +134,9 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
+# set STATIC_URL to /static/ folder, or to Amazon S3 bucket
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
-STATIC_URL = '/static/'
-
-# STATIC_URL = "https://s3-us-west-1.amazonaws.com/253-web-arch/static/"
+STATIC_URL = os.environ['STATIC_URL']
 
 # Leaflet
 LEAFLET_CONFIG = {
