@@ -19,7 +19,7 @@
     </style>
   </head>
   <body>
-    <h1>Map of Surfing Photos in California</h1>
+    <h2>Map of Surfing Photos in California</h2>
     {% leaflet_map "main" callback="maplocations" %}
     <script type="text/javascript">
 
@@ -36,5 +36,8 @@
         })
       }
     </script>
+    <br><p>Created by: <a target='_blank' href="https://www.ischool.berkeley.edu/people/brian-goodness">Brian Goodness</a>. (repo: <a target='_blank' href="https://github.com/briangoodness/flickr-surf-spots">here</a>.)</p>
+    <p>For the Fall 2016 course of <a target='_blank' href='https://ce263.github.io/'>CE 263 Scalable Spatial Analytics course</a> at UC Berkeley.</p>
+    <p>Images are taken from <a target='_blank' href="https://www.flickr.com/services/api/">Flickr's API</a></p>
   </body>
 </html>
