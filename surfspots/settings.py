@@ -134,14 +134,10 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
-# set STATIC_URL to /static/ folder, or to Amazon S3 bucket
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
-# STATIC_URL = os.environ['STATIC_URL']
-
+# note: be sure to properly configure 'STATIC_URL' in each environment
+# local environment: set to /static/
+# production environment: set to Amazon AWS S3 bucket (and make public)
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.9/howto/static-files/
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 STATIC_URL = os.environ['STATIC_URL']
 
