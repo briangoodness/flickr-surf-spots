@@ -1,3 +1,4 @@
+# Python 3.5.2
 import time
 import os
 import pandas as pd
@@ -18,7 +19,10 @@ cols = ['id',
         'latitude',
         'longitude',
         'latitude_rnd',
-        'longitude_rnd']
+        'longitude_rnd',
+        'url',
+        'page_url',
+        'title']
 
 #insert into locations table
 conn_info = os.environ['DATABASE_URL']

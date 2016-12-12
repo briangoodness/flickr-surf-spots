@@ -10,7 +10,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <style>
         .leaflet-container {  /* all maps */
-            width:  400px;
+            width:  800px;
             height: 400px;
         }
         #specialbigmap {
@@ -24,7 +24,7 @@
     <script type="text/javascript">
 
       function displayBox(feature, layer) {
-        layer.bindPopup("<b>Date Taken:</b> " + feature.properties.datetaken + "<br><b>Lat:</b> " + feature.properties.latitude + "<br><b>Long:</b> " + feature.properties.longitude);
+        layer.bindPopup("<p><b>" + feature.properties.title + "</b></p><a target='_blank' href=" + feature.properties.page_url +"><img src=" + feature.properties.url + " /></a><br><b>Date Taken:</b> " + feature.properties.datetaken + "<br><b>Lat:</b> " + feature.properties.latitude + "<br><b>Long:</b> " + feature.properties.longitude);
       }
 
       function maplocations(map, options) {

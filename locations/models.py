@@ -14,4 +14,7 @@ class Location(models.Model):
     longitude = models.DecimalField(max_digits=15, decimal_places=10)
     latitude_rnd = models.DecimalField(max_digits=15, decimal_places=10)
     longitude_rnd = models.DecimalField(max_digits=15, decimal_places=10)
+    url = models.URLField(null=True)
+    page_url = models.URLField(null=True)
+    title = models.CharField(max_length=255, null=True)
     geom = models.PointField(null=True)

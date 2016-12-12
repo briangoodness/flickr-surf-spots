@@ -24,5 +24,5 @@ from locations.models import Location
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', locations_views.map, name='leaflet-map'),
-    url(r'^data/$', GeoJSONLayerView.as_view(model=Location, properties=('latitude','longitude','datetaken')), name='data'),
+    url(r'^data/$', GeoJSONLayerView.as_view(model=Location, properties=('title','page_url','url','latitude','longitude','datetaken')), name='data'),
 ]
